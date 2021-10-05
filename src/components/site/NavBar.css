@@ -1,0 +1,24 @@
+.navbar{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    width: 100%;
+    background-color: rgb(10, 30, 70);
+    position: fixed;
+}
+
+.nav-links li{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-title h1 {
+    padding-left: 100px;
+    color: #f4f752b9;
+    font-family: Bebas Neue;
+}
+
+.nav-button {
+    margin-left: 150%;
+}
