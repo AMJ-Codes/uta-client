@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 import CommentIndex from './CommentIndex';
 import CommentFeed from '../../comments/CommentFeed';
-import SongSearch from '../spotify/SongSearch';
+import SongSearch from '../../spotify/songSearch';
 
 import NavBar from './Navbar';
 //import AuthMVP from '../Auth/AuthMVP';

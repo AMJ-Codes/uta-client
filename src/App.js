@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -5,9 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/site/Home';
 import AuthLanding from './components/Auth/AuthLanding';
+import Login from './spotify/Login.js'
 // import APIURL from './helpers/environment';
 
+const code = new URLSearchParams(window.location.search).get("code")
+
 function App() {
+ <Login /> 
   const [sessionToken, setSessionToken] = useState('');
 
   useEffect(() => {
@@ -33,7 +38,6 @@ function App() {
       <div className={classes.root}>
     
     <Router>
-      
       {/* <Greeting /> */}
       {protectedViews()}
       {/* <NavBar clickLogout={clearToken}/> */}

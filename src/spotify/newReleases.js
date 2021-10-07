@@ -23,12 +23,15 @@ export default function newReleases({ code }) {
     }, [accessToken])
 }
 
-spotifyApi.getAlbums([, ])
-  .then(function (data) {
-    console.log('Albums information', data.body);
-  }, function (err) {
-    console.error(err);
-  });
+    return (
+      <div
+        className="d-flex m-2 align-items-center"
+        style={{ cursor: "pointer" }}
+        onClick={handlePlay}
+      >
+        <img src={track.albumUrl} alt={''} style={{ height: "64px", width: "64px" }} />
+      </div>
+    )
 
 
 

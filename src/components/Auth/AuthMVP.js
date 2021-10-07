@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Col, Container, Form, FormGroup, Label, Input, Row } from 'reactstrap';
 import Greeting from '../site/Greeting';
+import 'animate.css'
 import APIURL from '../../helpers/environment';
 
 const Signup = (props) => {
@@ -23,6 +24,7 @@ const Signup = (props) => {
             props.updateToken(data.sessionToken)
         })
     }
+    
 
     return (
         <div>
@@ -64,6 +66,12 @@ const Login = (props) => {
         })
     }
     
+    function clearField() {
+        if(document.getElementById) {
+        document.htmlFor.value = "";
+        }
+        }
+
     return (
    
         <div>
@@ -106,7 +114,8 @@ const useStyles = makeStyles((theme) => ({
         },
         padding: {
             padding: '50px',
-        }
+        },
+        
 }));
  export default function AuthMVP(props) {
     const classes = useStyles();
@@ -120,8 +129,8 @@ const useStyles = makeStyles((theme) => ({
         <Container className={classes.text}>
             <Row>
                 <div className={classes.padding}>
-                <h1>Ever wonder who's trending? <span className={classes.textColorWhite}>Yeah, us too.</span></h1>
-                <h2> Sign in and let's find out. </h2>
+                <h1 class="animate__animated animate__slideInLeft">Ever wonder who's trending? <span className={classes.textColorWhite}>Yeah, us too.</span></h1>
+                <h2 class="animate__animated animate__slideInLeft"> Sign in and let's find out. </h2>
                 </div>
                 <Col md="6">
                     <Signup updateToken={props.updateToken} />

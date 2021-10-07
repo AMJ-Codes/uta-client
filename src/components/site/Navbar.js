@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-// import CommentIndex from './CommentIndex';
+import CommentIndex from './CommentIndex';
 // import Profile from './Profile';
-// import Home from './Home';
+import Home from './Home';
 import {Link} from 'react-router-dom';
 import './NavBar.css';
 import {
@@ -37,7 +37,7 @@ const NavBar = (props) => {
                         <ul >
                             <li><Link to='/commentfeed'><HomeIcon/></Link></li>
                             <li><Link to='/createcomment'><EventIcon/></Link></li>
-                            <li><Link to='/profile'><MusicNoteIcon/></Link></li>
+                            <li><Link to='/songSearch'><MusicNoteIcon/></Link></li>
                         </ul>
                     </NavItem>
             <NavbarBrand className='nav-title' href="/"><h1>Uta!</h1></NavbarBrand>
