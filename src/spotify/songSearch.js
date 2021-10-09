@@ -6,6 +6,8 @@ import { Container, Form } from "react-bootstrap"
 import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
 
+var searchText = ["You will not cry to Adele today. Ok, maybe a little.", "What're we listening to?", "It's time for 'that' song; you know the one.", "You wanna party? I wanna party!", "Music makes me lose control."];
+var randSearchText = searchText[Math.floor(Math.random() * searchText.length)]; 
 
 const spotifyApi = new SpotifyWebApi({
   clientId: "d5939a6c88b14b0a9416f80d88506c04",
@@ -78,7 +80,7 @@ export default function SongSearch({ code }) {
     <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
       <Form.Control
         type="search"
-        placeholder="Search Songs/Artists"
+        placeholder={randSearchText}
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
